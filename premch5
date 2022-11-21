@@ -1,0 +1,42 @@
+create table emp1(id number(2),name varchar(5),salary number(8));
+insert into emp1 values(1,'prem',50000);
+insert into emp1 values(2,'axit',40000);
+insert into emp1 values(3,'vando',20000);
+select * from emp1;
+
+create table emp2(id number(2), name varchar(6),salary number(8) );
+insert into emp2 values(2,'axit',40000);
+insert into emp2 values(3,'vando',20000);
+insert into emp2 values(4,'yash',25000);
+select * from emp2;
+
+select name from emp1 where name like 'a%'
+union all
+select name from emp2 where name like 'a%';
+
+select name from emp1 where name like 'a%'
+union
+select name from emp2 where name  like 'a%'; 
+
+select name from emp1 
+union all
+select name from emp2 ; 
+
+select * from emp1 
+union all
+select * from emp2 ; 
+
+select * from emp1 
+union 
+select * from emp2 ; 
+
+
+select * from emp1 
+intersect
+select * from emp2 ; 
+
+select * from emp1 
+minus
+select * from emp2 ; 
+
+select upper ('prem') from emp1;
